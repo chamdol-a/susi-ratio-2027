@@ -1,0 +1,182 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>브리핑 검증 — 9/9 마감 대학</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f8fa;--card:#fff;--ink:#191d23;--muted:#6b7480;--line:#e5e8ee;
+ --hot:#c2185b;--cold:#1565c0;--accent:#1f4e79;--chip:#eef2f7;--good:#0f7b3f;--warn:#b45309}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+ --bg:#15181c;--card:#1d2128;--ink:#e9ebee;--muted:#9aa3ad;--line:#2b323a;
+ --hot:#f472b6;--cold:#60a5fa;--accent:#7db3e8;--chip:#252b33;--good:#4ade80;--warn:#fbbf24}}
+:root[data-theme=dark]{--bg:#15181c;--card:#1d2128;--ink:#e9ebee;--muted:#9aa3ad;--line:#2b323a;
+ --hot:#f472b6;--cold:#60a5fa;--accent:#7db3e8;--chip:#252b33;--good:#4ade80;--warn:#fbbf24}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.72 "Noto Sans KR",-apple-system,"Segoe UI","Malgun Gothic",sans-serif}
+td,th,.mono{font-variant-numeric:tabular-nums}
+.wrap{max-width:1040px;margin:0 auto;padding:28px 18px 70px}
+header.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;border-bottom:2px solid var(--accent);padding-bottom:14px;margin-bottom:8px}
+h1{font-size:25px;margin:0 0 5px;letter-spacing:-.5px}
+.meta{color:var(--muted);font-size:13px}
+.by{text-align:right;line-height:1.4}.by b{display:block;font-size:16px}.by span{font-size:12px;color:var(--muted)}
+h2{font-size:19px;margin:38px 0 12px;padding-left:12px;border-left:5px solid var(--accent);letter-spacing:-.3px}
+h3{font-size:16px;margin:22px 0 8px}
+p{margin:8px 0 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:14px 0}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 6px}
+@media(max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.kpi .k{font-size:12px;color:var(--muted);margin-bottom:3px}.kpi .v{font-size:26px;font-weight:700;letter-spacing:-.6px;line-height:1.15}.kpi .s{font-size:12px;color:var(--muted);margin-top:2px}
+table{border-collapse:collapse;width:100%;font-size:13.5px;margin-top:6px}
+th,td{border-bottom:1px solid var(--line);padding:8px 9px;text-align:right;white-space:nowrap}
+th{background:var(--chip);font-size:12px;font-weight:600;text-align:center;border-bottom:2px solid var(--line);position:sticky;top:0}
+td.l,th.l{text-align:left}
+.fix{position:sticky;left:0;background:var(--card);z-index:3;box-shadow:2px 0 0 var(--line)}
+th.fix{z-index:4;background:var(--chip)}
+tr.pick:hover td.fix,tr.pick:focus td.fix{background:var(--chip)}
+tr.pick{cursor:pointer}tr.pick:hover td,tr.pick:focus td{background:var(--chip)}
+td.more{color:var(--accent);font-size:12px;font-weight:600}
+.em{font-weight:700}.dim{color:var(--muted)}
+.hot{color:var(--hot);font-weight:700}.cold{color:var(--cold);font-weight:700}
+.ty{display:inline-block;font-size:11px;color:var(--muted);background:var(--chip);border-radius:4px;padding:1px 6px;margin-left:6px}
+.delta{font-size:11px;margin-left:5px;font-weight:700}.delta.warn{color:var(--warn)}.delta.good{color:var(--good)}
+.bar{display:inline-block;width:110px;height:8px;background:var(--chip);border-radius:5px;overflow:hidden;vertical-align:middle;margin-right:7px}
+.bar span{display:block;height:100%;border-radius:5px}
+.x{font-size:12px;color:var(--muted)}
+.sp{color:var(--accent);vertical-align:middle}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.lead{font-size:15.5px}.lead b.up{color:var(--hot)}.lead b.dn{color:var(--cold)}
+ul{margin:8px 0 14px 20px;padding:0}li{margin:5px 0}
+ul.hist{list-style:none;margin-left:0}ul.hist li{padding:6px 0;border-bottom:1px dashed var(--line)}
+details{margin:10px 0}summary{cursor:pointer;color:var(--accent);font-size:13.5px;font-weight:600}
+.note{font-size:13px;color:var(--muted)}
+ul.pt{margin:4px 0 4px 18px;padding:0}ul.pt li{margin:7px 0;line-height:1.7}
+#dw .rep ul.pt li{margin:8px 0}
+.foot{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:12.5px;color:var(--muted);line-height:1.7}
+a{color:var(--accent)}
+.nav{display:flex;gap:8px;margin:0 0 16px}
+.nav a{padding:9px 20px;text-decoration:none;color:var(--accent);font-size:15px;font-weight:700;
+  border:2px solid var(--accent);border-radius:999px;background:var(--card);letter-spacing:-.2px}
+.nav a[aria-current=page]{background:var(--accent);color:#fff}
+.nav a:hover{filter:brightness(1.08)}
+a.go{text-decoration:none}a.go.btn{display:inline-block;padding:6px 12px;border:1px solid var(--accent);border-radius:8px;font-size:13px;font-weight:600}
+#ov{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;z-index:40}
+#dw{position:fixed;top:0;right:0;bottom:0;width:min(860px,100%);background:var(--card);
+ border-left:1px solid var(--line);z-index:50;transform:translateX(100%);transition:transform .22s;overflow:auto;padding:22px 24px 40px}
+#dw.on{transform:none}#ov.on{display:block}
+#dw h2{margin-top:18px}
+#dw .close{position:sticky;top:0;float:right;background:var(--chip);border:0;border-radius:8px;padding:6px 12px;cursor:pointer;color:var(--ink);font-family:inherit}
+#dw .rep{font-size:14.5px;line-height:1.8}
+#dw table{font-size:13px}
+.tabsel{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.tabsel button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 12px;cursor:pointer;font-family:inherit;font-size:13px}
+.tabsel button[aria-selected=true]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tabsel.sub button{font-size:12.5px;padding:4px 10px}.tabsel button small{opacity:.75;margin-left:4px;font-size:11px}
+#tb .two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:6px}
+@media(max-width:860px){#tb .two{grid-template-columns:1fr}}
+#tb h3{margin:10px 0 4px;font-size:14.5px}#tb table{font-size:13px}#tb td,#tb th{padding:6px 7px}
+#tb .tabsel{margin:4px 0 8px}
+@media(prefers-reduced-motion:reduce){#dw{transition:none}}
+
+.ok{color:var(--good);font-weight:700}.mid{color:var(--warn);font-weight:700}.bad{color:var(--hot);font-weight:700}
+tr.fin td{background:var(--chip);border-top:2px solid var(--accent)}
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+@media(max-width:720px){.grade{grid-template-columns:1fr}}
+.grade .g{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.grade .g .t{font-size:12px;color:var(--muted)}.grade .g .v{font-size:22px;font-weight:700;letter-spacing:-.5px}
+.grade .g .d{font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.6}
+.bad-list li{margin:9px 0}
+</style></head>
+<body><div class="wrap">
+<header class="top"><div><h1>브리핑 검증 — 9/9 마감 대학</h1>
+<div class="meta">고려대(안암)·연세대(서울)·서울대·포스텍 · 최종 확정값과 마감 전 브리핑 5판 대조 · 작성 2026-09-10 12:02</div></div>
+<div class="by"><b>김진석</b><span>EBS 입시정보 대표강사</span></div></header>
+<nav class="nav"><a href="report.html">브리핑</a><a href="./">탐색기</a><a href="verify.html" aria-current="page">검증</a></nav>
+
+<h2>한 줄 결론</h2>
+<div class="card lead">모집단위를 고른 눈은 정확했고, 대학 전체 수치는 부풀려 말했습니다.
+‘튀는 과’ 3곳은 모두 그 대학 <b class="up">상위 1~2%</b>로 마감했고, ‘조용한 과’ 11곳은 모두 작년보다 낮게 마감했습니다.
+반면 마감 당일 저녁에 내건 <b class="up">‘고려대 1.39배·연세대 1.16배’</b>는 비교 기준을 잘못 잡은 값입니다.
+실제 최종은 고려대 1.05배, 연세대 0.97배였습니다.</div>
+
+<div class="grade">
+  <div class="g"><div class="t">경쟁률이 튀는 모집단위</div><div class="v">3 / 3 적중</div>
+    <div class="d">지목한 3곳 모두 작년보다 상승. 대학 안 백분위 98.8~100%.</div></div>
+  <div class="g"><div class="t">경쟁률이 낮은 모집단위</div><div class="v">11곳 전부 하락</div>
+    <div class="d">다만 하위 10% 안에 든 것은 7곳. 1곳은 사실상 평범(백분위 55.8%).</div></div>
+  <div class="g"><div class="t">대학 전체 배수</div><div class="v">과대 표시</div>
+    <div class="d">저녁 판이 고려대 +33%p·연세대 +19%p 부풀림. 원인은 비교 기준.</div></div>
+</div>
+
+<h2>1. 최종 확정값</h2>
+<p class="note">올해 최종과 작년 최종을 같은 기준(마감 뒤 확정값)으로 맞댄 표입니다. 작년 값은 2026학년도 실시간 경쟁률 자료의 ‘최종’ 열입니다.</p>
+<div class="card"><div class="scroll"><table><thead><tr><th class="l">대학</th><th>올해 모집</th><th>올해 지원</th><th>올해 경쟁률</th><th>작년 모집</th><th>작년 지원</th><th>작년 경쟁률</th><th>지원 대비</th><th>경쟁률 대비</th></tr></thead><tbody><tr><td class="l"><b>고려대</b></td><td>2,731</td><td>55,875</td><td class="em">20.46</td><td class="dim">2,601</td><td class="dim">53,484</td><td class="dim">20.56</td><td class="hot">104.5%</td><td class="cold">99.5%</td></tr><tr><td class="l"><b>연세대</b></td><td>2,186</td><td>30,652</td><td class="em">14.02</td><td class="dim">1,949</td><td class="dim">31,604</td><td class="dim">16.22</td><td class="cold">97.0%</td><td class="cold">86.4%</td></tr><tr><td class="l"><b>포스텍</b></td><td>370</td><td>3,453</td><td class="em">9.33</td><td class="dim">370</td><td class="dim">3,553</td><td class="dim">9.60</td><td class="cold">97.2%</td><td class="cold">97.2%</td></tr><tr><td class="l"><b>서울대</b></td><td colspan="3" class="dim">실시간 경쟁률 미공개</td><td>2,096</td><td>16,787</td><td>8.01</td><td class="dim">–</td><td class="dim">–</td></tr></tbody></table></div></div>
+<p class="note">서울대는 수시 실시간 경쟁률을 공개하지 않아 브리핑 대상이 아니었고, 포스텍은 수도권 30개 대학 밖이라 어제 브리핑에 등장하지 않았습니다. 두 곳에 대해서는 검증할 주장이 없습니다.</p>
+
+<h2>2. 대학 전체 배수 — 시점별로 무엇을 말했나</h2>
+<p class="note">브리핑이 각 판에서 표시한 ‘작년 같은시점 대비’ 배수입니다. 맨 아래가 확정값입니다.</p>
+<div class="card"><div class="scroll"><table><thead><tr><th class="l">브리핑</th><th class="l">기준 수집분</th><th>고려대 표시</th><th>연세대 표시</th><th class="l">대학이 실제 발표한 기준시각</th></tr></thead><tbody><tr><td class="l"><b>09:32</b></td><td class="l dim">9/9 09시</td><td class="cold">0.32배</td><td class="cold">0.39배</td><td class="l dim">고려대 9/8 16시 · 연세대 9/8 17시 (둘 다 전날 값)</td></tr><tr><td class="l"><b>13:52</b></td><td class="l dim">9/9 13시</td><td class="cold">0.90배</td><td class="cold">0.78배</td><td class="l dim">고려대 9/9 11시 · 연세대 9/9 10시</td></tr><tr><td class="l"><b>15:36</b></td><td class="l dim">9/9 15시</td><td class="hot">1.03배</td><td class="cold">0.88배</td><td class="l dim">고려대 9/9 14시 · 연세대 9/9 14시</td></tr><tr><td class="l"><b>17:31</b></td><td class="l dim">9/9 17시</td><td class="hot">1.03배</td><td class="cold">0.88배</td><td class="l dim">고려대 9/9 14시 · 연세대 9/9 14시 (마감 직전인데 3시간 전 값)</td></tr><tr><td class="l"><b>22:41</b></td><td class="l dim">9/9 19시</td><td class="hot">1.39배</td><td class="hot">1.16배</td><td class="l dim">둘 다 최종현황 (비교 상대만 작년 마감 두어 시간 전 값)</td></tr><tr class="fin"><td class="l"><b>확정</b></td><td class="l dim">최종 마감값</td><td class="em">1.05배</td><td class="em">0.97배</td><td class="l dim">작년 최종과 직접 비교 (지원자 기준)</td></tr></tbody></table></div></div>
+<div class="card">
+<p><b>오전 판이 0.32배까지 내려간 이유.</b> 고려대는 마감일 오전까지 <b>전날 16시 기준</b> 값을 그대로 걸어 두었습니다.
+09시 수집분의 11,875명은 최종 55,875명의 21%에 불과합니다. 브리핑은 같은 화면에서
+‘직전 수집과 값이 같은 대학 14개(고려대·연세대 포함) — 이 대학들의 작년 대비는 낮게 나옵니다’라고 경고했지만,
+표의 순위 자체는 고려대를 ‘뒤처진 대학’으로 올려놓았습니다. 경고문보다 표가 먼저 읽힙니다.</p>
+<p><b>저녁 판이 1.39배까지 올라간 이유.</b> 마감 당일 비교 상대로 작년 ‘마감일 오후’ 스냅샷을 씁니다.
+그런데 작년에도 그 스냅샷 이후 지원자가 더 들어왔습니다. 고려대는 40,001명 → 최종 53,484명으로 <b>34%</b>가 더 들어왔고,
+연세대는 25,614명 → 31,604명으로 <b>23%</b>가 더 들어왔습니다.
+우리 쪽은 이미 최종값을 쥐고 있으면서 작년은 마감 두어 시간 전 값과 맞댄 셈이라, 배수가 그만큼 부풀려졌습니다.</p>
+</div>
+
+<h2>3. ‘경쟁률이 튀는 모집단위’ 채점</h2>
+<p class="note">교내 백분위는 그 대학 전체 모집단위를 ‘작년 대비 경쟁률 배수’로 줄 세웠을 때의 위치입니다. 100%에 가까울수록 가장 많이 오른 축입니다.</p>
+<div class="card"><div class="scroll"><table><thead><tr><th class="l">대학</th><th class="l">모집단위</th><th>유형</th><th>최초 지목</th><th>모집</th><th>최종 지원</th><th>최종 경쟁률</th><th>작년 경쟁률</th><th>작년 대비</th><th>교내 백분위</th><th>판정</th></tr></thead><tbody><tr><td class="l">고려대</td><td class="l"><b>교육학과</b></td><td class="dim">교과</td><td class="dim">13:52</td><td>8</td><td>94</td><td class="em">11.75</td><td class="dim">5.38</td><td class="hot">2.18배</td><td class="hot">100.0%</td><td><span class="ok">적중</span></td></tr><tr><td class="l">고려대</td><td class="l"><b>컴퓨터학과</b></td><td class="dim">교과</td><td class="dim">13:52</td><td>19</td><td>126</td><td class="em">6.63</td><td class="dim">4.43</td><td class="hot">1.50배</td><td class="hot">98.8%</td><td><span class="ok">적중</span></td></tr><tr><td class="l">연세대</td><td class="l"><b>교육학부</b></td><td class="dim">교과</td><td class="dim">13:52</td><td>9</td><td>138</td><td class="em">15.33</td><td class="dim">9.56</td><td class="hot">1.60배</td><td class="hot">100.0%</td><td><span class="ok">적중</span></td></tr></tbody></table></div></div>
+
+<h2>4. ‘경쟁률이 특별히 낮은 모집단위’ 채점</h2>
+<p class="note">고려대·연세대에서 작년 대비 자료가 붙는 324개 모집단위 가운데 <b>64.5%</b>가 어차피 작년보다 낮게 마감했습니다.
+그래서 ‘내렸다’만으로는 점수를 줄 수 없고, 하위 10% 안에 들었는지로 채점했습니다.</p>
+<div class="card"><div class="scroll"><table><thead><tr><th class="l">대학</th><th class="l">모집단위</th><th>유형</th><th>최초 지목</th><th>모집</th><th>최종 지원</th><th>최종 경쟁률</th><th>작년 경쟁률</th><th>작년 대비</th><th>교내 백분위</th><th>판정</th></tr></thead><tbody><tr><td class="l">고려대</td><td class="l"><b>환경생태공학부</b></td><td class="dim">교과</td><td class="dim">09:32</td><td>11</td><td>57</td><td class="em">5.18</td><td class="dim">14.18</td><td class="cold">0.36배</td><td class="cold">1.2%</td><td><span class="ok">적중</span></td></tr><tr><td class="l">고려대</td><td class="l"><b>식품공학과</b></td><td class="dim">교과</td><td class="dim">13:52</td><td>7</td><td>34</td><td class="em">4.86</td><td class="dim">11.43</td><td class="cold">0.42배</td><td class="cold">1.8%</td><td><span class="ok">적중</span></td></tr><tr><td class="l">고려대</td><td class="l"><b>가정교육과</b></td><td class="dim">교과</td><td class="dim">09:32</td><td>7</td><td>76</td><td class="em">10.86</td><td class="dim">25.29</td><td class="cold">0.43배</td><td class="cold">2.4%</td><td><span class="ok">적중</span></td></tr><tr><td class="l">고려대</td><td class="l"><b>보건환경융합과학부</b></td><td class="dim">교과</td><td class="dim">09:32</td><td>18</td><td>75</td><td class="em">4.17</td><td class="dim">8.56</td><td class="cold">0.49배</td><td class="cold">3.0%</td><td><span class="ok">적중</span></td></tr><tr><td class="l">고려대</td><td class="l"><b>바이오의공학부</b></td><td class="dim">교과</td><td class="dim">09:32</td><td>12</td><td>59</td><td class="em">4.92</td><td class="dim">9.75</td><td class="cold">0.51배</td><td class="cold">3.6%</td><td><span class="ok">적중</span></td></tr><tr><td class="l">연세대</td><td class="l"><b>진리자유학부(자연)</b></td><td class="dim">교과</td><td class="dim">09:32</td><td>20</td><td>75</td><td class="em">3.75</td><td class="dim">7.76</td><td class="cold">0.48배</td><td class="cold">3.9%</td><td><span class="ok">적중</span></td></tr><tr><td class="l">고려대</td><td class="l"><b>건축사회환경공학부</b></td><td class="dim">교과</td><td class="dim">09:32</td><td>15</td><td>157</td><td class="em">10.47</td><td class="dim">16.27</td><td class="cold">0.64배</td><td class="cold">7.7%</td><td><span class="ok">적중</span></td></tr><tr><td class="l">고려대</td><td class="l"><b>학부대학</b></td><td class="dim">종합</td><td class="dim">09:32</td><td>9</td><td>141</td><td class="em">15.67</td><td class="dim">22.50</td><td class="cold">0.70배</td><td class="">10.1%</td><td><span class="mid">부분</span></td></tr><tr><td class="l">연세대</td><td class="l"><b>IT융합공학전공</b></td><td class="dim">종합</td><td class="dim">13:52</td><td>6</td><td>54</td><td class="em">9.00</td><td class="dim">12.40</td><td class="cold">0.73배</td><td class="">21.9%</td><td><span class="mid">부분</span></td></tr><tr><td class="l">고려대</td><td class="l"><b>경제학과</b></td><td class="dim">교과</td><td class="dim">09:32</td><td>21</td><td>117</td><td class="em">5.57</td><td class="dim">6.67</td><td class="cold">0.83배</td><td class="">29.0%</td><td><span class="bad">빗나감</span></td></tr><tr><td class="l">연세대</td><td class="l"><b>건축공학과</b></td><td class="dim">논술</td><td class="dim">13:52</td><td>7</td><td>220</td><td class="em">31.43</td><td class="dim">34.75</td><td class="cold">0.90배</td><td class="">55.8%</td><td><span class="bad">빗나감</span></td></tr></tbody></table></div></div>
+<div class="card">
+<p><b>오전 판의 지목이 오히려 정확했습니다.</b> 09:32 판에서 고른 8곳 중 7곳이 하위 10.1% 안에 들었습니다.
+대학 전체 수치가 밤사이 미갱신으로 왜곡돼 있어도, 같은 대학 안에서 어느 과가 조용한지를 재는
+‘교내 상대’ 지표는 그 왜곡을 함께 나눠 가지므로 흔들리지 않았습니다.</p>
+<p><b>빗나간 한 건.</b> 연세대 건축공학과(논술)는 ‘조용한 과’로 지목했지만 백분위 55.8%로 한가운데에 마감했습니다.
+지원자는 417명 → 220명으로 반 토막 났는데 모집이 12명 → 7명으로 줄어 경쟁률은 34.75 → 31.43에 그쳤습니다.
+지원자 수로 조용함을 재면 모집 축소가 큰 과에서 이런 착시가 생깁니다.</p>
+</div>
+
+<h2>5. 틀린 것</h2>
+<div class="card"><ol class="bad-list">
+<li><b>마감한 대학의 배수를 부풀렸습니다.</b> 저녁 판 고려대 1.39배(실제 1.05배)·연세대 1.16배(실제 0.97배).
+전체 헤드라인 ‘119%’도 이 두 대학이 지원자의 32%를 차지해 함께 부풀려졌습니다.
+같은 기준으로 다시 계산하면 <b>109%</b>입니다.</li>
+<li><b>‘급등 위험’으로 네 판 연속 지목한 고려대 보건환경융합과학부(종합)는 급등하지 않았습니다.</b>
+최종 17.51로 작년 22.80의 0.77배. 지목 근거였던 ‘모집 63→43 축소’ 자체가 틀렸습니다.
+실시간 경쟁률 자료 기준으로는 작년 41명 → 올해 43명으로 오히려 늘었습니다.
+모집 증감은 학과 로데이터에서, 작년 지원자는 D-day 자료에서 가져오는데 두 출처의 모집인원이 어긋납니다.</li>
+<li><b>모집단위 배수도 같은 이유로 과장됐습니다.</b> 고려대 컴퓨터학과는 ‘2.42배’로 표시했지만
+작년 최종 기준으로는 1.35배입니다. 교육학과는 2.76배 표시, 실제 2.19배.</li>
+<li><b>마감 직전 두 시간이 비어 있었습니다.</b> 17:30 브리핑이 쓴 고려대 값은 <b>14시 기준</b>입니다.
+그 뒤 들어온 13,715명(최종의 24.5%)은 어제 어떤 브리핑에도 담기지 않았습니다. 연세대도 7,439명(24.3%)이 같습니다.
+정작 ‘눈치 지원 실효선은 마감 2~3시간 전’이라고 안내한 바로 그 시간대입니다.</li>
+</ol></div>
+
+<h2>6. 고친 것</h2>
+<div class="card"><ul class="pt">
+<li><b>마감·최종 발표한 대학은 작년 ‘최종’ 값과 비교합니다.</b> 접수상태가 ‘접수마감’이고 기준시각이 ‘최종’인 대학을
+가려내 비교 열을 바꿨습니다. 오늘 마감하는 서울시립대·이화여대·한국체육대, 내일 마감하는 183개교부터 적용됩니다.</li>
+<li><b>마감 다음 날에도 표에 남습니다.</b> 지금까지는 마감이 지나면 비교 대상에서 통째로 빠져 확정 결과를 볼 수 없었습니다.</li>
+<li><b>대학이 발표한 기준시각을 표에 함께 싣습니다.</b> 우리 수집 시각이 아니라 대학이 실제로 갱신한 시각이 판단 기준입니다.</li>
+</ul></div>
+
+<h2>7. 읽는 분께</h2>
+<div class="card note"><ul>
+<li>마감 전 브리핑의 <b>대학 단위 배수</b>는 상대 비교용 눈금입니다. 갱신이 늦는 대학이 섞여 있어 순위 그대로 믿을 값이 아닙니다.</li>
+<li><b>모집단위 단위의 ‘빠르다·조용하다’</b>는 같은 대학 안에서 재는 값이라 갱신 지연에 훨씬 덜 흔들립니다. 이쪽을 보십시오.</li>
+<li>‘조용한 과’는 대체로 조용하게 마감합니다. 다만 <b>모집인원이 크게 줄어든 과</b>는 지원자가 줄어도 경쟁률이 안 떨어집니다. 모집 증감을 함께 보십시오.</li>
+<li>마감 당일 <b>15시 이후</b>는 어느 자료로도 실시간 파악이 어렵습니다. 고려대는 작년에도 마감일 하루에만 최종의 79.7%가 들어왔습니다.</li>
+</ul></div>
+
+<div class="foot">자료 · 진학사/유웨이 실시간 경쟁률 수집분, 2026 수시 실시간 경쟁률(D-day 비교) 자료.
+작년 값은 모두 <b>최종 확정</b> 기준입니다. 검증 대상은 2026-09-09에 생성한 브리핑 5판입니다.</div>
+</div></body></html>

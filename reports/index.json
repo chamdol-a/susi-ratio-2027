@@ -1,5 +1,209 @@
 [
  {
+  "file": "briefing_20260912_1927.html",
+  "time": "2026-09-12 19:27",
+  "basis": "9/12 19시",
+  "overall": 1.041
+ },
+ {
+  "file": "briefing_20260912_1727.html",
+  "time": "2026-09-12 17:27",
+  "basis": "9/12 17시",
+  "overall": 1.041
+ },
+ {
+  "file": "briefing_20260912_1528.html",
+  "time": "2026-09-12 15:28",
+  "basis": "9/12 15시",
+  "overall": 1.041
+ },
+ {
+  "file": "briefing_20260912_1352.html",
+  "time": "2026-09-12 13:52",
+  "basis": "9/12 13시",
+  "overall": 1.041
+ },
+ {
+  "file": "briefing_20260911_2011.html",
+  "time": "2026-09-11 20:11",
+  "basis": "9/11 20시",
+  "overall": 1.038
+ },
+ {
+  "file": "briefing_20260911_1851.html",
+  "time": "2026-09-11 18:51",
+  "basis": "9/11 18시",
+  "overall": 1.021
+ },
+ {
+  "file": "briefing_20260911_1817.html",
+  "time": "2026-09-11 18:17",
+  "basis": "9/11 18시",
+  "overall": 1.042
+ },
+ {
+  "file": "briefing_20260911_1617.html",
+  "time": "2026-09-11 16:17",
+  "basis": "9/11 16시",
+  "overall": 1.036
+ },
+ {
+  "file": "briefing_20260911_1530.html",
+  "time": "2026-09-11 15:30",
+  "basis": "9/11 15시",
+  "overall": 1.016
+ },
+ {
+  "file": "briefing_20260911_1314.html",
+  "time": "2026-09-11 13:14",
+  "basis": "9/11 13시",
+  "overall": 0.995
+ },
+ {
+  "file": "briefing_20260911_1205.html",
+  "time": "2026-09-11 12:05",
+  "basis": "9/11 12시",
+  "overall": 1.077
+ },
+ {
+  "file": "briefing_20260911_1136.html",
+  "time": "2026-09-11 11:36",
+  "basis": "9/11 11시",
+  "overall": 1.064
+ },
+ {
+  "file": "briefing_20260911_1124.html",
+  "time": "2026-09-11 11:24",
+  "basis": "9/11 11시",
+  "overall": 1.064
+ },
+ {
+  "file": "briefing_20260911_1105.html",
+  "time": "2026-09-11 11:05",
+  "basis": "9/11 11시",
+  "overall": 1.064
+ },
+ {
+  "file": "briefing_20260911_1005.html",
+  "time": "2026-09-11 10:05",
+  "basis": "9/11 10시",
+  "overall": 0.905
+ },
+ {
+  "file": "briefing_20260911_0905.html",
+  "time": "2026-09-11 09:05",
+  "basis": "9/11 09시",
+  "overall": 0.805
+ },
+ {
+  "file": "briefing_20260911_0108.html",
+  "time": "2026-09-11 01:08",
+  "basis": "9/11 00시",
+  "overall": 0.765
+ },
+ {
+  "file": "briefing_20260910_2336.html",
+  "time": "2026-09-10 23:36",
+  "basis": "9/10 23시",
+  "overall": 1.086
+ },
+ {
+  "file": "briefing_20260910_1936.html",
+  "time": "2026-09-10 19:36",
+  "basis": "9/10 19시",
+  "overall": 1.018
+ },
+ {
+  "file": "briefing_20260910_1905.html",
+  "time": "2026-09-10 19:05",
+  "basis": "9/10 19시",
+  "overall": 1.01
+ },
+ {
+  "file": "briefing_20260910_1822.html",
+  "time": "2026-09-10 18:22",
+  "basis": "9/10 19시",
+  "overall": 1.01
+ },
+ {
+  "file": "briefing_20260910_1705.html",
+  "time": "2026-09-10 17:05",
+  "basis": "9/10 17시",
+  "overall": 0.961
+ },
+ {
+  "file": "briefing_20260910_1622.html",
+  "time": "2026-09-10 16:22",
+  "basis": "9/10 17시",
+  "overall": 0.951
+ },
+ {
+  "file": "briefing_20260910_1556.html",
+  "time": "2026-09-10 15:56",
+  "basis": "9/10 15시",
+  "overall": 0.952
+ },
+ {
+  "file": "briefing_20260910_1505.html",
+  "time": "2026-09-10 15:05",
+  "basis": "9/10 15시",
+  "overall": 0.959
+ },
+ {
+  "file": "briefing_20260910_1404.html",
+  "time": "2026-09-10 14:04",
+  "basis": "9/10 14시",
+  "overall": 0.981
+ },
+ {
+  "file": "briefing_20260910_1305.html",
+  "time": "2026-09-10 13:05",
+  "basis": "9/10 13시",
+  "overall": 1.001
+ },
+ {
+  "file": "briefing_20260910_1252.html",
+  "time": "2026-09-10 12:52",
+  "basis": "9/10 11시",
+  "overall": 1.016
+ },
+ {
+  "file": "briefing_20260910_1207.html",
+  "time": "2026-09-10 12:07",
+  "basis": "9/10 11시",
+  "overall": 1.041
+ },
+ {
+  "file": "briefing_20260910_1106.html",
+  "time": "2026-09-10 11:06",
+  "basis": "9/10 09시",
+  "overall": 0.783
+ },
+ {
+  "file": "briefing_20260910_0941.html",
+  "time": "2026-09-10 09:41",
+  "basis": "9/10 09시",
+  "overall": 0.822
+ },
+ {
+  "file": "briefing_20260910_0905.html",
+  "time": "2026-09-10 09:05",
+  "basis": "9/10 09시",
+  "overall": 0.828
+ },
+ {
+  "file": "briefing_20260909_2241.html",
+  "time": "2026-09-09 22:41",
+  "basis": "9/9 19시",
+  "overall": 1.193
+ },
+ {
+  "file": "briefing_20260909_1731.html",
+  "time": "2026-09-09 17:31",
+  "basis": "9/9 17시",
+  "overall": 1.037
+ },
+ {
   "file": "briefing_20260909_1413.html",
   "time": "2026-09-09 14:13",
   "basis": "9/9 13시",
